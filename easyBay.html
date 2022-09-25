@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Succulent Shop</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            height: 1000px;
+            align-items: center;
+        }
+        .header{
+            background-color: white;
+            height: 100px;
+            width: 900px;
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+
+        }
+        .tlogo{
+            display: flex;
+            align-items: center;
+            
+        }
+        .logo{
+            background-color: rgb(79, 164, 135);
+            margin-right: 10px;
+        }
+        .easybay{
+            font-size: 40px;
+        }
+        .search input{
+            font-size: 20px;
+            padding: 10px 10px;
+            width: 500px;
+            border-radius: 30px;
+            text-align: start;
+        }
+        .signin button{
+            background-color: white;
+            border: none;
+            font-size: 20px;
+
+        }
+        .cart {
+            background-color: white;
+            border: none;
+            
+        }
+        .navBar{
+            display: flex;
+            width: 900px;
+            height: 30px;
+            font-size: 20px;
+            padding-top: 10px;
+            justify-content: space-between;
+            border-bottom: 5px solid #111;
+        }
+        .title{
+            width: 900px;
+            height: 100px;
+            font-size: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main1{
+            height: 300px;
+            width: 900px;
+            display: flex;
+            
+        }
+        .left{
+            background-color: rgb(79, 164, 135);
+            display: flex;
+            flex-direction: row;
+            width: 600px;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .info{
+            width: 300px;
+            height: 300px;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding-left: 10px;
+            background-color: rgb(79, 164, 135);
+            color: white;
+            
+        }
+        .info img {
+        height: 30px;
+        width: 30px;
+        position: relative;
+        top: 70px;
+        left: -50px;
+        
+        }
+        .pic1{
+            height: 300px;
+            
+        }
+        .right{
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 280px;
+            align-items: flex-end;
+            
+        }
+        .pic2{
+            padding-bottom: 10px;
+        }
+        .underpic2{
+            background-color: rgb(79, 164, 135);
+            width: 285px;
+            height: 80px;
+            margin-top: 16px;
+            display: flex;
+            justify-content:flex-start;
+            align-items: center;
+            color: white;
+            
+        }
+        .underpic2 p {
+            padding: 0px 20px;
+            font-size: 20px;
+        }
+        .main2{
+            background-color: aquamarine;
+            height: 300px;
+            width: 900px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .main22{
+            width: 900px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;   
+        }
+        .img5 img{
+            border-radius: 50%;
+            width: 130px;
+        }
+        .main2names{
+            width: 900px;
+            display: flex;
+            justify-content:space-around;
+            padding-top: 10px;
+        }
+        .main2names div{
+            display: flex;
+        }
+        .aloe{
+            position: relative;
+            left: 10px;
+        }
+        .aloe2{
+            position: relative;
+            left: 25px;
+        }
+        #cookie{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid #111;
+            width: 500px;
+        }
+        .accept button {
+            color: white;
+            background-color:rgb(79, 164, 135); 
+            font-size: 20px;
+            
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="tlogo">
+                <div class="logo"><img src="assets/leaf.png" alt="logo"></div>
+                <div class="easybay">EasyBay</div>
+            </div>
+            <div class="search"><input type="text" placeholder="Search for anything"> </div>
+            <div class="signin"><button type="button" onclick="logout(this)">Sign In</button></div>
+            <button class="cart" onclick="alert('your cart is empty!')"><img src="assets/cart-dark.png" alt="cart" height="40px"></button>
+        </div>
+        <div class="navBar">
+            <div>Aeonium</div>
+            <div>Andormischus</div>
+            <div>Agave</div>
+            <div>Aloe</div>
+            <div>Anacampseros</div>
+            <div>Aristaloe</div>
+            <div>more..</div>
+        </div>
+        <div class="title">Your Source for Serious Succulent Specialties</div>
+        <div class="main1">
+            <div class="left">
+                <div class="info">Discover succulent varieties one pot or rack at a time! <br><br> Discover <img src="assets/arrow-light.png" alt="arrow" height="30px"></div>
+                <div class="pic1"><img  id="myImg" onmouseover = "changePic1()" onmouseout= "changePic2()" src="assets/succulents-1.jpg" alt="some pic" height="300px"></div>
+            </div>
+            <div class="right">
+                <div class="pic2"><img src="assets/aloe-m.jpg" alt="pic" height="190px"></div>
+                <div class="underpic2"> <p> Soothing aloe </p><img src="assets/arrow-light.png" alt="arrow" height="20px"> </div>
+            </div>
+        </div>
+        <div class="main2">
+            <div class="main22">
+                <div class="img5"><img src="assets/aeonium-s.jpg" alt="pic"></div>
+                <div class="img5"><img src="assets/aloe-s.jpg" alt="pic"></div>
+                <div class="img5"><img src="assets/cactus-s.jpg" alt="pic"></div>
+                <div class="img5"><img src="assets/echeveria-s.jpg" alt="pic"></div>
+                <div class="img5"><img src="assets/sedum-s.jpg" alt="pic"></div>
+                <div class="img5"><img src="assets/sempervivum-s.jpg" alt="pic"></div>
+            </div>
+            <div class="main2names">
+                <div>Aeonium</div>
+                <div class="aloe">Aloe</div>
+                <div class="aloe2">Cactus</div>
+                <div class="aloe2">Echeveria</div>
+                <div class="aloe2">Sedum</div>
+                <div class="aloe2">Sempervivum</div>
+            </div>
+        </div>
+        <div id="cookie">
+            <div class="wait"><img src="assets/alert-dark.png" alt="wait"></div>
+            <div class="paragraph"> this site makes use of third party cookies ...</div>
+            <div class="accept"><button onclick="accept()">i accept</button></div>
+        </div>
+        
+    </div>
+</body>
+<script src="easy.js"></script>
+</html>
